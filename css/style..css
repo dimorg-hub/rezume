@@ -1,6 +1,6 @@
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0px;
 }
@@ -16,29 +16,38 @@ a {
 }
 
 body {
-  background-color: rgba(140, 167, 123, 0.747);
-
+  background-color: rgba(172, 202, 153, 0.795);
+  background-image: url(../image/nebo-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: sans-serif;
 }
 
-.wrapper {
-  padding: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.main {
+  padding-top: 40px;
 }
 
 .container {
-  height: 100vh;
-  background-color: rgba(47, 94, 138, 0.37);
   max-width: 1200px;
   margin: 0 auto;
-  padding: 30px;
+  padding: 0 30px;
 }
 
 .title {
   text-align: center;
   color: #fff;
   margin-bottom: 40px;
+  text-shadow: 0 0 5px #000;
+  font-size: 34px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 700;
+}
+
+.wrapper {
+  padding: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .buttons {
@@ -47,37 +56,123 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-right: 5%;
   width: 20%;
 }
 
 .buttons__btn {
-  padding: 10px 20px;
+  padding: 10px;
   cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0.623);
   border-radius: 3px;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   -webkit-box-shadow: 0 0 3px #000;
-  box-shadow: 0 0 3px #000;
+          box-shadow: 0 0 3px #000;
   font-size: 13px;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.buttons__foto {
+  height: 200px;
+  width: 200px;
+  background-image: url(../image/Screenshot_1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 30px;
+  -webkit-animation: foto 12s infinite;
+          animation: foto 12s infinite;
+  -webkit-box-shadow: 0 0 20px 5px #fff;
+          box-shadow: 0 0 20px 5px #fff;
+}
+
+@-webkit-keyframes foto {
+  0% {
+    border-top-right-radius: 45%;
+    border-bottom-right-radius: 40%;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 42%;
+  }
+  25% {
+    border-top-right-radius: 62%;
+    border-bottom-right-radius: 37%;
+    border-bottom-left-radius: 23%;
+    border-top-left-radius: 30%;
+  }
+  50% {
+    border-top-right-radius: 38%;
+    border-bottom-right-radius: 64%;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 55%;
+  }
+  75% {
+    border-top-right-radius: 61%;
+    border-bottom-right-radius: 84%;
+    border-bottom-left-radius: 82%;
+    border-top-left-radius: 46%;
+  }
+  100% {
+    border-top-right-radius: 45%;
+    border-bottom-right-radius: 40%;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 42%;
+  }
+}
+
+@keyframes foto {
+  0% {
+    border-top-right-radius: 45%;
+    border-bottom-right-radius: 40%;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 42%;
+  }
+  25% {
+    border-top-right-radius: 62%;
+    border-bottom-right-radius: 37%;
+    border-bottom-left-radius: 23%;
+    border-top-left-radius: 30%;
+  }
+  50% {
+    border-top-right-radius: 38%;
+    border-bottom-right-radius: 64%;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 55%;
+  }
+  75% {
+    border-top-right-radius: 61%;
+    border-bottom-right-radius: 84%;
+    border-bottom-left-radius: 82%;
+    border-top-left-radius: 46%;
+  }
+  100% {
+    border-top-right-radius: 45%;
+    border-bottom-right-radius: 40%;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 42%;
+  }
 }
 
 .buttons__btn.active {
   -webkit-transform: translateX(20px);
-  transform: translateX(20px);
+          transform: translateX(20px);
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   background-color: rgba(128, 128, 128, 0.884);
   color: #fff;
   -webkit-box-shadow: 0 0 5px #000;
-  box-shadow: 0 0 5px #000;
+          box-shadow: 0 0 5px #000;
 }
 
 .content {
   width: 70%;
+}
+
+.content__inner {
+  -webkit-box-shadow: 0 0 5px #000;
+          box-shadow: 0 0 5px #000;
 }
 
 .content__inner {
@@ -86,12 +181,23 @@ body {
   border-radius: 3px;
 }
 
-.personal__text {
+.personal {
   font-size: 18px;
 }
 
-.personal__text:not(:last-child) {
-  margin-bottom: 7px;
+.personal__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.personal__about {
+  width: 25%;
+}
+
+.personal__text {
+  width: 75%;
 }
 
 .skills__title {
@@ -110,6 +216,12 @@ body {
   position: relative;
   color: rgba(17, 0, 255, 0.726);
   font-size: 20px;
+  -webkit-transition: text-shadow 0.3s ease-in-out;
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+.skills__item:hover {
+  text-shadow: 0 0 2px #000;
 }
 
 .skills__item:not(:last-child) {
@@ -122,15 +234,17 @@ body {
   background-color: #555;
   color: #fff;
   text-align: center;
-  padding: 5px 0;
   border-radius: 4px;
   position: absolute;
   bottom: 150%;
   left: 50%;
   -webkit-transform: translate(-50%);
-  transform: translate(-50%);
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+          transform: translate(-50%);
+  -webkit-transition: opacity 0.3s, -webkit-box-shadow 0.5s;
+  transition: opacity 0.3s, -webkit-box-shadow 0.5s;
+  transition: opacity 0.3s, box-shadow 0.5s;
+  transition: opacity 0.3s, box-shadow 0.5s, -webkit-box-shadow 0.5s;
+  opacity: 0;
   padding: 5px;
 }
 
@@ -143,12 +257,14 @@ body {
   height: 10px;
   background-color: #555;
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
-  transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .skills__item:hover .skills__text {
   visibility: visible;
   opacity: 1;
+  -webkit-box-shadow: 0 0 10px 2px #2c2c2c;
+          box-shadow: 0 0 10px 2px #2c2c2c;
 }
 
 .content__inner.certificat.active {
@@ -156,28 +272,38 @@ body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
 }
 
 .certificat__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.certificat__inner:hover {
+  cursor: pointer;
+}
+
+.certificat__inner:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .certificat__img {
   max-width: 200px;
-  -webkit-transition: -webkit-transform 0.4s;
-  transition: -webkit-transform 0.4s;
-  transition: transform 0.4s;
-  transition: transform 0.4s, -webkit-transform 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  height: 300px;
 }
 
 .certificat__img:hover {
-  -webkit-transform: scale(1.5);
-  transform: scale(1.5);
+  -webkit-box-shadow: 0 0 14px 2px #000;
+          box-shadow: 0 0 14px 2px #000;
+  cursor: pointer;
 }
 
 .biography__text {
@@ -192,7 +318,7 @@ body {
 .content__inner {
   display: none;
   -webkit-animation: block 0.4s linear;
-  animation: block 0.4s linear;
+          animation: block 0.4s linear;
 }
 
 .content__inner.active {
@@ -207,7 +333,6 @@ body {
     left: -50px;
     opacity: 0;
   }
-
   100% {
     left: 0;
     opacity: 1;
@@ -219,38 +344,144 @@ body {
     left: -50px;
     opacity: 0;
   }
-
   100% {
     left: 0;
     opacity: 1;
   }
 }
 
-.work__inner {
-  max-width: 200px;
-  height: auto;
-}
-
-.work__link {
-  display: inline-block;
-}
-
-.work__img {
-  max-width: 200px;
-  max-height: 100px;
-}
-
-.work.content__inner.active {
+.work__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.work__item {
+  border-radius: 4px;
+  border: 2px solid #555;
+  text-align: center;
+  max-width: 200px;
+  overflow: hidden;
+  padding-bottom: 10px;
+  position: relative;
+  margin-bottom: 20px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.work__item::after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  background-color: rgba(3, 3, 3, 0.13);
+  z-index: 3;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.work__item:hover::after {
+  background-color: transparent;
+  z-index: -1;
+}
+
+.work__item:hover {
+  -webkit-box-shadow: 0 0 0 99999px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 0 0 99999px rgba(0, 0, 0, 0.8);
+}
+
+.work__item:hover .work__subtitle,
+.work__item:hover .work__text {
+  color: black;
+}
+
+.work__link {
+  color: rgba(177, 177, 177, 0.568);
+}
+
+.work__img {
+  width: 200px;
+  height: 50%;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.work__subtitle {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+  padding: 0 5px;
+}
+
+.work__text {
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 400;
+  margin-bottom: 15px;
+  padding: 0 5px;
+}
+
+.contacts__text {
+  font-size: 18px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.contacts__text::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .contacts__text:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.contacts__text--email::after {
+  background-image: url(../image/icon/email.png);
+}
+
+.contacts__text--tel::after {
+  background-image: url(../image/icon/phone.png);
+}
+
+.contacts__text--telegram::after {
+  background-image: url(../image/icon/telegram.png);
+}
+
+.contacts__text--skype::after {
+  background-image: url(../image/icon/skype.png);
+}
+
+.contacts__text--viber::after {
+  background-image: url(../image/icon/telegram.png);
+}
+
+.contacts__link {
+  -webkit-transition: color 0.3s, text-shadow 0.3s;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.contacts__link:hover {
+  color: rgba(0, 0, 0, 0.322);
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.582);
 }

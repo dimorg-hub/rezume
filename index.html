@@ -6,6 +6,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Резюме</title>
+	<base target="_blank">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;1,700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="css/style..css">
 </head>
 
@@ -15,6 +21,7 @@
 			<h1 class="title">Резюме на позицию HTML-Верстальщика</h1>
 			<div class="wrapper">
 				<div class="buttons">
+					<div class="buttons__foto"></div>
 					<button type="button" class="buttons__btn personal--btn active">Персональная информация</button>
 					<button type="button" class="buttons__btn skills--btn">Навыки работы</button>
 					<button type="button" class="buttons__btn work--btn">Примеры работ</button>
@@ -24,14 +31,48 @@
 				</div>
 				<div class="content">
 					<div class="personal content__inner active">
-						<p class="personal__text">ФИО - Попов Дмитрий Михайлович</p>
-						<p class="personal__text">Возраст: 35лет</p>
-						<p class="personal__text">Образование: Средне-специальное</p>
-						<p class="personal__text">Семейное положение: Холост</p>
-						<p class="personal__text">Дети: Нет</p>
+						<div class="personal__inner">
+							<p class="personal__about">ФИО:</p>
+							<p class="personal__text"> Попов Дмитрий Михайлович
+							</p>
+						</div>
+						<div class="personal__inner">
+							<p class="personal__about">Возраст:</p>
+							<p class="personal__text"> 35лет.
+							</p>
+						</div>
+						<div class="personal__inner">
+							<p class="personal__about">Образование:</p>
+							<p class="personal__text"> Горловский жилищно-коммунальный техникум с 2001г. по 2005г.
+							</p>
+						</div>
+						<div class="personal__inner">
+							<p class="personal__about">Семейное положение:</p>
+							<p class="personal__text"> Холост.
+							</p>
+						</div>
+						<div class="personal__inner">
+							<p class="personal__about">Дети:</p>
+							<p class="personal__text"> Нет.
+							</p>
+						</div>
+						<div class="personal__inner">
+							<p class="personal__about">Личные качества:</p>
+							<p class="personal__text"> Ответственный, усидчивый, обучаемый,
+								целеустремлённый. Веду здоровый образ жизни.
+							</p>
+						</div>
+						<div class="personal__inner">
+							<p class="personal__about">Цель:</p>
+							<p class="personal__text"> Устроиться на интересную работу с достойной оплатой и перспективой
+								карьерного роста.
+							</p>
+						</div>
+
+
 					</div>
 					<div class="skills content__inner">
-						<h3 class="skills__title">Есть опыт работы с программами:</h3>
+						<h3 class="skills__title">Опыт работы с программами:</h3>
 						<ul class="skills__list">
 							<li class="skills__item">Adobe Photoshop,
 								<p class="skills__text">Умение работать на начинающем уровне,работа с изображениями(вырезка,
@@ -59,12 +100,12 @@
 								</p>
 							</li>
 							<li class="skills__item">GitKraken.
-								<p class="skills__text">Умение работать на хорошем уровне, работа с ветками, push and pull и
+								<p class="skills__text">Умение работать на хорошем уровне, работа с ветками, push, pull и
 									т.п. без использования терминала.
 								</p>
 							</li>
 						</ul>
-						<h3 class="skills__title">Есть опыт работы с:</h3>
+						<h3 class="skills__title">Опыт работы с:</h3>
 						<ul class="skills__list">
 							<li class="skills__item">Html,
 								<p class="skills__text">Уверенные знания. Умения стороить правильную симантическую структуру
@@ -110,59 +151,107 @@
 						</ul>
 					</div>
 					<div class="work content__inner">
-						<div class="work__inner">
-							<a class="work__link" href="https://dimorg-hub.github.io/sea/">
-								<img class="work__img" src="image/12.jpg" alt="Скриншот сайта">
-							</a>
-						</div>
-						<div class="work__inner">
-							<a class="work__link" href="https://dimorg-hub.github.io/ready/">
-								<img class="work__img" src="image/11.jpg" alt="Скриншот сайта">
-							</a>
-						</div>
-						<div class="work__inner">
-							<a class="work__link" href="https://dimorg-hub.github.io/woods/">
-								<img class="work__img" src="image/13.jpg" alt="Скриншот сайта">
-							</a>
-						</div>
+						<ul class="work__list">
+							<li class="work__item">
+								<a class="work__link" href="https://dimorg-hub.github.io/sea/">
+									<img class="work__img" src="image/12.jpg" alt="Скриншот сайта">
+									<h6 class="work__subtitle">Железный порт</h6>
+									<p class="work__text">Небольшой лединг о отдыхе на море.</p>
+
+								</a>
+							</li>
+							<li class="work__item">
+								<a class="work__link" href="https://dimorg-hub.github.io/ready/">
+									<img class="work__img" src="image/11.jpg" alt="Скриншот сайта">
+									<h6 class="work__subtitle">Ready</h6>
+									<p class="work__text">Лединг о Спортзале.</p>
+
+								</a>
+							</li>
+							<li class="work__item">
+								<a class="work__link" href="https://dimorg-hub.github.io/woods/">
+									<img class="work__img" src="image/13.jpg" alt="Скриншот сайта">
+									<h6 class="work__subtitle">Woods</h6>
+									<p class="work__text">Сайт о лесопилке.</p>
+								</a>
+							</li>
+							<li class="work__item">
+								<a class="work__link" href="https://dimorg-hub.github.io/plant/">
+									<img class="work__img" src="image/14.jpg" alt="Скриншот сайта">
+									<h6 class="work__subtitle">Plant</h6>
+									<p class="work__text">Небольшой лединг о растениях.</p>
+								</a>
+							</li>
+						</ul>
 					</div>
 					<div class="certificat content__inner">
 						<div class="certificat__inner">
-							<img class="certificat__img" src="image/0-1.png" alt="">
+							<a href="image/0-1.png" data-fancybox="images" data-width="1414" data-height="2000">
+								<img class="certificat__img" src="image/0-1.png" alt="Серитификат">
+							</a>
 						</div>
 						<div class="certificat__inner">
-							<img class="certificat__img" src="image/2.jpg" alt="">
+							<a href="image/2.jpg" data-fancybox="images" data-width="1600" data-height="1129">
+								<img class="certificat__img" src="image/2.jpg" alt="Серитификат">
+							</a>
 						</div>
 						<div class="certificat__inner">
-							<img class="certificat__img" src="image/3.jpg" alt="">
+							<a href="image/3.jpg" data-fancybox="images" data-width="1600" data-height="1129">
+								<img class="certificat__img" src="image/3.jpg" alt="Серитификат">
+							</a>
 						</div>
 					</div>
 					<div class="biography content__inner">
-						<p class="biography__text">Начал изучать вёрстку с 08.2019г. в основном с уроков на ютубе, верстал
+						<p class="biography__text">
+							Родился 07.07.1986 года в городе Горловка Донецкой области. </p>
+						<p class="biography__text">
+							Учился в средней школе № 16. </p>
+						<p class="biography__text">
+							На базе 9 классов поступил в Горловский жилищно-коммунальный техникум.
+						</p>
+						<p class="biography__text">
+							После окончания техникума работал на
+							Стироле слесарем-ремонтником. Затем работал в теплосети на котельной.
+						</p>
+						<p class="biography__text">
+							В 2014 году в связи с боевыми
+							действиями выехал с города Горловки на Украину.
+						</p>
+						</p>
+						<p class="biography__text">Начал изучать вёрстку с августа 2019 года в основном с уроков на ютубе,
+							верстал
 							простые леденги.</p>
-						<p class="biography__text">В декабре 2020 пошел на курсы от 0 до 1 учился до марта 2021г.</p>
+						<p class="biography__text">В декабре 2020 года пошел на курсы от 0 до 1 и учился до марта 2021 года.
+						</p>
 						<p class="biography__text">
 							После курсов верстал небольшие сайты и леденги, в данный момент прохожу курс на Udeemy нативный js
 							+ React.
 						</p>
 					</div>
 					<div class="contacts content__inner">
-						<div class="contacts content__inner">
-							<p class="contacts__text">Еmail -
-								<a href="mailto:dimorg30@gmail.com">dimorg30@gmail.com</a></p>
-							<p class="contacts__text">Телефон - <a href="tel:+380508662480">+38-050-866-24-80</a></p>
-							<p class="contacts__text">Телеграмм - <a href="https://t.me/DimorGs">https://t.me/DimorGs</a></p>
-							<p class="contacts__text">Skype - <a href="skype:dima.eve">dima.eve</a></p>
-							<p class="contacts__text">Viber - <a href="viber://chat?number=+380508662480">Viber</a></p>
-						</div>
+
+						<p class="contacts__text contacts__text--email">Еmail -
+							<a class="contacts__link" href="mailto:dimorg30@gmail.com">dimorg30@gmail.com</a>
+						</p>
+						<p class="contacts__text contacts__text--tel">Телефон -
+							<a class="contacts__link" href="tel:+380508662480">+38-050-866-24-80</a></p>
+						<p class="contacts__text contacts__text--telegram">Телеграмм - <a class="contacts__link"
+								href="https://t.me/DimorGs">https://t.me/DimorGs</a></p>
+						<p class="contacts__text contacts__text--skype">Skype - <a class="contacts__link"
+								href="skype:dima.eve">dima.eve</a></p>
+						<p class="contacts__text contacts__text--viber">Viber - <a class="contacts__link"
+								href="viber://chat?number=+380508662480">+380508662480</a>
+						</p>
+
 					</div>
 				</div>
 			</div>
 
 		</div>
 	</main>
-	<footer></footer>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
 	<script src="js/style.js"></script>
 </body>
 
